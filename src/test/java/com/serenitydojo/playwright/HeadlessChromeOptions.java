@@ -12,7 +12,8 @@ public class HeadlessChromeOptions implements OptionsFactory{
 	public Options getOptions() {
 		return new Options()
 				.setLaunchOptions(new BrowserType.LaunchOptions()
-						.setArgs(java.util.Arrays.asList("--no-sandbox","--disable-extensions"))).setHeadless(true)
+						.setArgs(java.util.Arrays.asList("--no-sandbox", "--disable-extensions", "--disable-gpu")))
+				.setHeadless(true)
 				.setTestIdAttribute("data-test");
 		
 		
